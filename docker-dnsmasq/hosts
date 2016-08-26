@@ -7,8 +7,6 @@ ff00::0 ip6-mcastprefix
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 
-127.0.0.1 localhost 
-
 # These are not really hosts -- they are for install-files to do substitutions
 192.168.0.0  network
 255.255.248.0 netmask
