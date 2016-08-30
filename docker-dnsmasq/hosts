@@ -83,12 +83,14 @@ ff02::2 ip6-allrouters
 192.168.1.114 redis
 
 
-192.168.1.130 unused11
+192.168.1.130 swr2024 #Machine room switch
 192.168.1.131 unused1
 192.168.1.132 phone
 192.168.1.133 tivo
 192.168.1.134 rasp #mac=b8:27:eb:00:26:e2 
-192.168.1.137 unused4
+192.168.1.135 rasp2
+192.168.1.136 rasp3
+192.168.1.137 wlan #mac=00:13:ef:b0:0b:65
 192.168.1.138 unused5
 192.168.1.140 unused6
 192.168.1.141 garageps

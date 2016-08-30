@@ -1,0 +1,58 @@
+city: Los Angeles
+tz: America/Los_Angeles
+host:  ["admin:admin@homeauto"] # [insteon, insteon2]
+switches:
+    lights: [B2,B3,B4,B5]
+    #livingroom: 1E.3F.0D
+    study: [B12,B13]
+    desk: B12
+    readingchair: B13
+    stairs: B5
+    #frontlight: 1E.EF.E1
+    #backlight: 1E.F1.48
+    #outside: [1E.EF.E1,1E.F1.48]
+    garage: B8
+    fountain: B1
+    pbed: J1
+    lawn: J2
+    orchard: J3
+    yard: J4
+    herbs: j5
+    fence: j6
+    splanter: j7
+    nplanter: j8
+    rosebed: j9
+    frontplanters: j10
+    avocado: j11
+    jungle: j12
+    frontyard: j13
+    driveway: j14
+    frontdrip: j15
+    parkway: j16
+    sprinklers: [J1,J2,J3,J4,J5,J6,J7,J8,J9,J10,J11,J12,J13,J14,J15,J16]
+schedule:
+
+    -   {switch: desk, queue: l,          from: '3:00', to: + 1 }      
+    #-   {switch: lawn, queue: w,          from: + 1,    to: + 8,  } 
+    -   {switch: orchard, queue: w,       from: + 1,    to: + 5,  if: 'ordinal % 4 == 0'} 
+    -   {switch: herbs, queue: w,         from: + 1,    to: + 5,   if: 'ordinal % 5 == 0'} 
+    #-   {switch: fence, queue: w,         from: + 1,    to: + 8,   if: 'ordinal % 4 == 0'}  
+    #-   {switch: splanter, queue: w,      from: + 1,    to: + 8,   if: 'ordinal % 2 == 0'} 
+    #-   {switch: nplanter, queue: w,      from: + 1,    to: + 8,   if: 'ordinal % 2 == 0'} 
+    -   {switch: frontplanters, queue: w, from: + 1,    to: + 7,  if: 'ordinal % 4 == 0'}  
+    -   {switch: avocado, queue: w,       from: + 1,    to: + 15,  if: 'ordinal % 5 == 0'} 
+    -   {switch: jungle, queue: w,        from: + 1,    to: + 8,  if: 'ordinal % 5 == 0'} 
+    -   {switch: frontyard, queue: w,     from: + 1,    to: + 5,   if: 'ordinal % 6 == 0'} 
+    -   {switch: parkway, queue: w,       from: + 1,    to: + 6,   if: 'ordinal % 5 == 0'}      
+    -   {switch: frontdrip, queue: w,     from: + 1,    to: + 7,  if: 'ordinal % 3 == 0'}   
+    -   {switch: pbed,      queue: w,     from: + 1,    to: + 20,  if: 'ordinal % 4 == 0'}   
+    -   {switch: sprinklers,queue: w,     at: + 1,      dir: 'off'  }  
+    -   {switch: sprinklers,queue: w,     at: + 1,      dir: 'off'  }  
+         
+    #-   {switch: outside, queue: l,  from: sunset, to: '23:15' }
+    #-   {switch: frontlight, queue: l,    at: '23:20',  dir: 'off'  }  
+    #-   {switch: backlight , queue: l,    at: '23:21',  dir: 'off'  }  
+    #-   {switch: study, queue: l,      from: sunset - 30 ,to: '23:20' }        
+    #-   {switch: study, queue: l,      from: '5:30' ,to: '7:00' }    
+        
+    
