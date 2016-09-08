@@ -1,0 +1,143 @@
+127.0.0.1   localhost
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+# These are not really hosts -- they are for install-files to do substitutions
+192.168.0.0  network
+255.255.248.0 netmask
+192.168.7.255 broadcast
+192.168.0.1 gateway
+
+# The TWC dns servers
+#66.75.164.90 extns1
+#66.75.160.16 extns2
+
+# OpenDNS
+208.67.222.222 extdns1
+208.67.220.220 extdns2
+
+192.168.2.0  firstdhcp
+192.168.2.254 lastdhcp
+192.168.1.2 dns
+
+192.168.0.2 garageswitch
+
+192.168.1.11 agony
+192.168.1.12 torture
+192.168.1.13 gloom
+192.168.1.14 grief
+192.168.1.15 grouch
+192.168.1.16 grump
+192.168.1.17 remorse
+192.168.1.18 distress
+192.168.1.19 horror
+192.168.1.20 regret
+192.168.1.21 panic
+192.168.1.22 ennui
+192.168.1.23 buzzkill
+192.168.1.24 killjoy
+192.168.1.25 cassandra
+
+# Hosts
+192.168.1.28 lorne
+192.168.1.29 leno
+192.168.1.30 barker
+192.168.1.31 sajak
+192.168.1.32 trebek
+192.168.1.33 carson
+
+# Apple machines
+192.168.1.40 gala-hard
+192.168.1.41 gala #mac=b8:8d:12:53:e5:7e 
+192.168.1.42 fuji-en
+192.168.1.43 fuji #mac=58:b0:35:7b:4e:66
+192.168.1.44 crispin
+192.168.1.45 pippin
+192.168.1.46 roma
+192.168.1.47 roma-en
+
+# Service machines
+192.168.1.80 chronos
+192.168.1.81 proxy
+192.168.1.82 hipache
+
+# Applications
+192.168.1.101 dkan
+192.168.1.102 confluence
+192.168.1.103 database
+192.168.1.104 backup
+192.168.1.105 proj 
+192.168.1.106 mysql 
+192.168.1.107 ipython 
+192.168.1.108 rstudio 
+192.168.1.109 jira
+192.168.1.110 cantfindittokillit
+192.168.1.111 mongo
+192.168.1.112 ckan
+192.168.1.113 redmine
+192.168.1.114 redis
+
+
+192.168.1.130 swr2024 #Machine room switch
+192.168.1.131 unused1
+192.168.1.132 phone
+192.168.1.133 tivo
+192.168.1.134 rasp 
+192.168.1.135 rasp2
+192.168.1.136 rasp3
+192.168.1.137 wlan #mac=00:13:ef:b0:0b:65
+192.168.1.138 unused5
+192.168.1.140 unused6
+192.168.1.141 garageps
+192.168.1.142 netps
+192.168.1.143 stairsps
+192.168.1.144 unused7
+192.168.1.145 unused8
+192.168.1.146 unused9
+192.168.1.147 unused10
+192.168.1.148 powermeter #mac=00:25:2F:20:0D:DC 
+192.168.1.149 busboom-a
+192.168.1.150 insteon #mac=00:0E:F3:17:00:B7
+192.168.1.151 homeauto #mac=00:21:b9:02:1a:5d 
+
+192.168.1.177 nas1 duplicity #mac=00:0D:A2:01:83:CD
+192.168.1.178 nas2 #mac=00:0D:A2:01:A0:AA
+#
+#
+#
+# Virtual machines
+192.168.1.190 spirit
+192.168.1.191 casper
+192.168.1.192 shade
+192.168.1.193 ghost
+192.168.1.194 banshee
+192.168.1.195 spook
+192.168.1.196 wraith
+192.168.1.197 specter
+#
+192.168.1.240 test1
+192.168.1.241 test2
+192.168.1.242 test3
+# 
+#
+# Other virtual machines, usually containers
+#
+
+192.168.4.120 data-library
+192.168.4.121 data-builder 
+192.168.4.122 warehouse1 
+192.168.4.123 warehouse2
+192.168.4.124 dblibrary
+192.168.4.125 numbers
+192.168.4.126 ambry-install
+192.168.4.127 geocache
+#
+# Clarinova devel machines
+192.168.5.11 home-devel
+192.168.3.71 home-wiki
+
