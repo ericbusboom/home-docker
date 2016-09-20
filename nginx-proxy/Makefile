@@ -1,9 +1,5 @@
 include Makefile.local
-NS = busboom.org
-VERSION = latest
 
-REPO = dnsmasq
-NAME = dnsmasq
 INSTANCE = default
 DOCKER ?= docker
 
@@ -16,7 +12,7 @@ push:
 	$(DOCKER) push $(NS)/$(REPO):$(VERSION)
 
 shell:
-	$(DOCKER) run --rm -i -t $(PORTS) $(VOLUMES) $(ENV) $(NS)/$(REPO):$(VERSION) /bin/bash
+	$(DOCKER) run --rm --name $(NAME) -i -t $(PORTS) $(VOLUMES) $(ENV) $(NS)/$(REPO):$(VERSION) /bin/bash
 
 run:
 	$(DOCKER) run --rm --name $(NAME) $(PORTS) $(VOLUMES) $(ENV) $(NS)/$(REPO):$(VERSION)

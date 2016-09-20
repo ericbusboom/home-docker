@@ -1,11 +1,21 @@
-include Makefile.local
-NS = busboom.org
-VERSION = latest
-
-REPO = dnsmasq
-NAME = dnsmasq
 INSTANCE = default
 DOCKER ?= docker
+
+NS = gaff
+VERSION = latest
+
+REPO = alpine-sshd
+
+DOCKER ?= docker
+
+PORTS =  -p 80 -p 2222:22
+
+NAME=docker-fs
+
+VOLUMES= -v /share/docker/docker-fs:/var/docker-fs
+ENV = -e AUTHORIZED_KEY="`cat ~/.ssh/id_rsa.pub`" -e VIRTUAL_HOST=dockerfs.busboom.org
+
+.PHONY: build push shell run start stop restart reload rm rmf release
 
 .PHONY: build push shell run start stop restart reload rm rmf release
 
@@ -16,7 +26,7 @@ push:
 	$(DOCKER) push $(NS)/$(REPO):$(VERSION)
 
 shell:
-	$(DOCKER) run --rm -i -t $(PORTS) $(VOLUMES) $(ENV) $(NS)/$(REPO):$(VERSION) /bin/bash
+	$(DOCKER) run --rm --name $(NAME) -i -t $(PORTS) $(VOLUMES) $(ENV) $(NS)/$(REPO):$(VERSION) /bin/bash
 
 run:
 	$(DOCKER) run --rm --name $(NAME) $(PORTS) $(VOLUMES) $(ENV) $(NS)/$(REPO):$(VERSION)

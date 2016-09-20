@@ -1,11 +1,22 @@
-include Makefile.local
+
+INSTANCE = default
+DOCKER ?= docker
+
 NS = busboom.org
 VERSION = latest
 
-REPO = dnsmasq
-NAME = dnsmasq
-INSTANCE = default
+REPO = pythonapp
+NAME = pythonapp
+
 DOCKER ?= docker
+
+FLASK_APP ?= start.py
+
+PORTS =  -p 80 
+
+#VOLUMES= -v /share/CACHEDEV1_DATA/docker/docker-fs:/var/docker-fs
+VOLUMES= -v /share/CACHEDEV1_DATA/docker/docker-fs:/var/docker-fs
+ENV = -e VIRTUAL_HOST=devel.busboom.org -e FLASK_APP=$(FLASK_APP) -e FLASK_DEBUG=1
 
 .PHONY: build push shell run start stop restart reload rm rmf release
 
@@ -16,7 +27,7 @@ push:
 	$(DOCKER) push $(NS)/$(REPO):$(VERSION)
 
 shell:
-	$(DOCKER) run --rm -i -t $(PORTS) $(VOLUMES) $(ENV) $(NS)/$(REPO):$(VERSION) /bin/bash
+	$(DOCKER) run --rm --name $(NAME) -i -t $(PORTS) $(VOLUMES) $(ENV) $(NS)/$(REPO):$(VERSION) /bin/bash
 
 run:
 	$(DOCKER) run --rm --name $(NAME) $(PORTS) $(VOLUMES) $(ENV) $(NS)/$(REPO):$(VERSION)
