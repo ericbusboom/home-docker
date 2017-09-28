@@ -2,6 +2,14 @@
 # docker-dnsmasq
 
 
+## Running on QNAP nas
+
+The QPAN container server runs a DHCP server, which conflicts with the one in this container. 
+
+This command seems to stop the daemon:
+
+    daemon_mgr  dhcpd_lxcbr0 stop "/mnt/ext/opt/netmgr/api/core/dhcpdLink/dhcpd_lxcbr0 -cf /etc/dhcpd_lxcbr0.conf -lf /var/state/dhcp/dhcpd_lxcbr0.leases -pf /mnt/ext/opt/netmgr/api/core/dhcpdLink/lxcbr0.pid"
+
 
 ## Build
 
@@ -10,19 +18,14 @@
 
 ## Run
 
+First, create a network
+
+    docker network create --subnet=192.168.0.0/21 local_net
+
+Then run
+
     docker run -d -p 53:53/udp -p 8081:8080 --name dns ericbusboom/dns 
 
+Or, more likely, run 
 
-## Makefile.local
-
-THe Makefile expects an include file, Makefile.local, which has local config values. 
-
-    PORTS = -p 8080:80
-
-    VOLUMES = -v /var/log/docker:/var/log
-
-    ENV = \
-      -e SOME_KEY=SOME_VALUE
-
-
-This file is excluded from git
+    make start

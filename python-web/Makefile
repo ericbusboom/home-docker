@@ -16,7 +16,7 @@ PORTS =  -p 80
 
 #VOLUMES= -v /share/CACHEDEV1_DATA/docker/docker-fs:/var/docker-fs
 VOLUMES= -v /share/CACHEDEV1_DATA/docker/docker-fs:/var/docker-fs
-ENV = -e VIRTUAL_HOST=devel.busboom.org -e FLASK_APP=$(FLASK_APP) -e FLASK_DEBUG=1
+ENV = -e VIRTUAL_HOST=pythonapp.busboom.org -e FLASK_APP=$(FLASK_APP) -e FLASK_DEBUG=1
 
 .PHONY: build push shell run start stop restart reload rm rmf release
 

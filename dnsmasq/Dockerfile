@@ -1,6 +1,7 @@
 # Originally from: https://github.com/jpillora/docker-dnsmasq
 
-FROM phusion/baseimage:latest
+# phusion/baseimage:latest == 0.9.22 fails with "Python error: getrandom() failed"
+FROM phusion/baseimage:0.9.19
 
 MAINTAINER eric@busboom.org
 

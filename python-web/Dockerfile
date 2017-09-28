@@ -1,3 +1,5 @@
+# A Python / Flask server that runs an application in the /var/docker-fs
+# directory, which is mounted on NFS when this container is run on nas 1
 FROM jfloff/alpine-python:2.7
 
 RUN pip install --upgrade pip

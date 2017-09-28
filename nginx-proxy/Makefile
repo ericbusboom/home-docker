@@ -1,5 +1,17 @@
-include Makefile.local
+NS = busboom.org
+VERSION = latest
 
+REPO = proxy
+NAME = proxy
+
+DOCKER ?= docker
+
+PORTS =   -p 8091:80
+
+#VOLUMES = -v /var/log/docker:/var/log
+VOLUMES= -v /var/run/docker.sock:/tmp/docker.sock:ro
+
+#ENV = -e SOME_KEY=SOME_VALUE
 INSTANCE = default
 DOCKER ?= docker
 

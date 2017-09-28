@@ -18,6 +18,9 @@ push:
 shell:
 	$(DOCKER) run --rm -i -t $(PORTS) $(VOLUMES) $(ENV) $(NS)/$(REPO):$(VERSION) /bin/bash
 
+attach:
+	$(DOCKER) exec  -ti $(NAME) /bin/bash
+
 run:
 	$(DOCKER) run --rm --name $(NAME) $(PORTS) $(VOLUMES) $(ENV) $(NS)/$(REPO):$(VERSION)
 
