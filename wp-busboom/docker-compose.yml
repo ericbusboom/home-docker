@@ -1,0 +1,30 @@
+version: '2.0' 
+services:
+    wordpress:
+        build: ../wp-multisite/wordpress/
+        image: wordpress:civicknowledge
+        env_file: ../private-environment.txt
+        environment:
+         - WORDPRESS_DB_HOST=mariadb
+         - WORDPRESS_DB_NAME=wp_busboom
+         - WORDPRESS_DOMAIN_CURRENT_SITE=busboom.org
+         - >-
+             VIRTUAL_HOST=www.busboom.org,busboom.org,eric.busboom.org,jenni.busboom.org,max.busboom.org,
+             blog.busboom.org,ericbusboom.com, research.busboom.org
+         - >- 
+             LETSENCRYPT_HOST=www.busboom.org,busboom.org,eric.busboom.org,jenni.busboom.org,
+             max.busboom.org,blog.busboom.org,ericbusboom.com
+         - LETSENCRYPT_EMAIL=eric@busboom.org
+        ports:
+         - 80
+        volumes:
+         - html:/var/www/html
+
+volumes:
+    html:  
+    
+networks:
+  default:
+    external:
+      name: webproxy
+      
