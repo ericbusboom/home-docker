@@ -8,7 +8,7 @@ MAINTAINER eric@busboom.org
 USER root
 
 RUN apt-get update && \
-    apt-get install --no-install-recommends -y python dnsmasq ca-certificates curl && \
+    apt-get install --no-install-recommends -y python dnsmasq ca-certificates curl net-tools iproute2 && \
 	apt-get remove --purge -y curl && \
 	apt-get autoremove -y && \
 	rm -rf /var/lib/apt/lists/*

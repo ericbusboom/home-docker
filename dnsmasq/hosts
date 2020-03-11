@@ -41,7 +41,7 @@ ff02::2 ip6-allrouters
 192.168.1.25 cassandra
 
 # Hosts
-192.168.1.28 lorne
+192.168.1.28 lorne # Raspberry pi running docker containers
 192.168.1.29 leno
 192.168.1.30 barker
 192.168.1.31 sajak
@@ -59,6 +59,7 @@ ff02::2 ip6-allrouters
 192.168.1.47 roma-en
 192.168.1.48 bardsey-en
 192.168.1.49 braeburn
+192.168.1.50 jonagold
 
 # Other Machines
 192.168.1.61 zeno
@@ -70,8 +71,8 @@ ff02::2 ip6-allrouters
 
 192.168.1.130 swr2024 #Machine room switch
 192.168.1.131 hp2035n #mac=2C:27:D7:0D:57:EE
-192.168.1.132 phone
-192.168.1.133 tivo
+192.168.1.132 rproxy # Reverse proxy. 
+192.168.1.133 unused
 192.168.1.137 wlan #mac=00:13:ef:b0:0b:65
 192.168.1.138 unused5
 192.168.1.140 unused6
@@ -82,28 +83,17 @@ ff02::2 ip6-allrouters
 192.168.1.145 unused8
 192.168.1.146 unused9
 192.168.1.147 unused10
-192.168.1.148 powermeter #mac=00:25:2F:20:0D:DC 
+192.168.1.148 unused
 192.168.1.149 busboom-a
 192.168.1.150 insteon #mac=00:0E:F3:17:00:B7
 192.168.1.151 homeauto #mac=00:21:b9:02:1a:5d 
 
 192.168.1.177 nas1 duplicity #mac=00:0D:A2:01:83:CD
 192.168.1.178 nas2 #mac=00:0D:A2:01:A0:AA
+192.168.1.179 nas1_2 # Second adapter on nas1
 #
 # Robots, other projects
-192.168.2.20 rasp 
-192.168.2.21 rasp1
-192.168.2.22 rasp2
-192.168.2.23 rasp3
-192.168.2.24 rasp4
-192.168.2.25 rasp5
-
-192.168.3.20 raspw 
-192.168.3.21 rasp1w
-192.168.3.22 rasp2w
-192.168.3.23 rasp3w
-192.168.3.24 rasp4w
-192.168.3.25 rasp5w
+192.168.1.180 rasp1 
 
 #
 #

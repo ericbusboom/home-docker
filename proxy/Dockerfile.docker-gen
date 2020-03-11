@@ -1,0 +1,7 @@
+FROM jwilder/docker-gen
+
+ADD nginx.tmpl /tmp
+
+ADD docker-gen-entrypoint.sh /usr/local/bin
+
+ENTRYPOINT ["/usr/local/bin/docker-gen-entrypoint.sh"]

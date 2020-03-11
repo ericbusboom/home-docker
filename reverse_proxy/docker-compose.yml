@@ -1,0 +1,11 @@
+version: '3'
+services:
+  nginx: 
+    image: nginx:latest
+    container_name: nginx_proxy
+    build: 
+        dockerfile: Dockerfile
+        context: .
+    ports:
+      - 80:80
+      - 8443:443

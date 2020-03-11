@@ -1,19 +1,19 @@
 version: '2.0' 
 services:
     wordpress:
-        build: ../wp-multisite/wordpress/
+        build: ../../docker-services/wp-multisite
         image: wordpress:civicknowledge
-        env_file: ../private-environment.txt
+        env_file: private-environment.txt
         environment:
          - WORDPRESS_DB_HOST=mariadb
          - WORDPRESS_DB_NAME=wp_busboom
          - WORDPRESS_DOMAIN_CURRENT_SITE=busboom.org
          - >-
              VIRTUAL_HOST=www.busboom.org,busboom.org,eric.busboom.org,jenni.busboom.org,max.busboom.org,
-             blog.busboom.org,ericbusboom.com, research.busboom.org
+             ericbusboom.com, research.busboom.org,not.evenwrong.com
          - >- 
              LETSENCRYPT_HOST=www.busboom.org,busboom.org,eric.busboom.org,jenni.busboom.org,
-             max.busboom.org,blog.busboom.org,ericbusboom.com
+             max.busboom.org,ericbusboom.com,not.evenwrong.com
          - LETSENCRYPT_EMAIL=eric@busboom.org
         ports:
          - 80

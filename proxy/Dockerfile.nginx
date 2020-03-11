@@ -1,0 +1,10 @@
+FROM nginx:latest
+
+ADD proxy.conf /etc/nginx/conf.d/proxy.conf
+
+RUN { \
+      echo 'server_tokens off; #foober'; \
+      echo 'client_max_body_size 100m;'; \
+    } > /etc/nginx/conf.d/my_proxy.conf
+
+
