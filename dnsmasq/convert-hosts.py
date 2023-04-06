@@ -1,11 +1,17 @@
 #!/bin/env python 
 
 import re
+from sys import argv
+
+if len(argv) > 1:
+    fn = argv[1]
+else:
+    fn = '/etc/dnsmasq.d/hosts'
 
 #p = re.compile('(\d+\.\d+\.\d+.\d+)\s+([\^b]+)\s*\#?\s*(?:mac\s*=\s*([\d\:]+))?')
 p = re.compile('^(\d+\.\d+\.\d+.\d+)\s+([^\b\#\s]+)\s*\#?\s*(?:mac\s*=\s*([\w\:]+))?')
 
-with open('/etc/dnsmasq.d/hosts') as f:
+with open(fn) as f:
     for l in f.readlines():
         m = p.match(l.strip())
         if m:

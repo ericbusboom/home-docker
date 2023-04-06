@@ -42,24 +42,25 @@ ff02::2 ip6-allrouters
 
 # Hosts
 192.168.1.28 lorne # Raspberry pi running docker containers
-192.168.1.29 leno
+192.168.1.29 lorne2 # dc:a6:32:88:67:c8 
 192.168.1.30 barker
 192.168.1.31 sajak
 192.168.1.32 trebek
 192.168.1.33 carson
+192.168.1.29 leno
 
 # Apple machines
-192.168.1.40 gala-hard
-192.168.1.41 gala #mac=b8:8d:12:53:e5:7e 
-192.168.1.42 fuji-en
-192.168.1.43 fuji #mac=58:b0:35:7b:4e:66
-192.168.1.44 crispin
-192.168.1.45 pippin
-192.168.1.46 roma
-192.168.1.47 roma-en
-192.168.1.48 bardsey-en
+192.168.1.40 gala #b8:8d:12:53:e5:7e
+192.168.1.41 gala2 #e4:ce:8f:61:07:d8	
+192.168.1.42 honeycrisp # 14:7d:da:a6:5c:56
+192.168.1.43 fuji # a4:83:e7:a4:24:c4
+192.168.1.44 Bardsey # a4:5e:60:e6:1d:9f
+192.168.1.45 unused
+192.168.1.46 Jonagold # a4:83:e7:75:87:aa
+192.168.1.47 unused
+192.168.1.48 unused
 192.168.1.49 braeburn
-192.168.1.50 jonagold
+192.168.1.50 braeburn-w
 
 # Other Machines
 192.168.1.61 zeno
@@ -67,6 +68,17 @@ ff02::2 ip6-allrouters
 192.168.1.63 hume
 192.168.1.64 payne
 192.168.1.65 mill
+
+192.168.1.80 BusboomD 
+192.168.1.81 BusboomG
+192.168.1.82 BusboomU
+# Devices
+192.168.1.110 EricsWatch # d6:0c:8a:54:d9:40
+192.168.1.111 BedstandPhone # 78:7e:61:50:ce:80
+192.168.1.112 amazon-6e893 # 40:b4:cd:cb:cb:27
+192.168.1.113 XBOXONE  # 70:bc:10:96:ff:cf
+192.168.1.114 Samizdat # 88:19:08:2d:f9:25	
+192.168.1.115  ATV-Living-Room # 90:dd:5d:b8:16:2f
 
 
 192.168.1.130 swr2024 #Machine room switch
@@ -85,7 +97,7 @@ ff02::2 ip6-allrouters
 192.168.1.147 unused10
 192.168.1.148 unused
 192.168.1.149 busboom-a
-192.168.1.150 insteon #mac=00:0E:F3:17:00:B7
+192.168.1.150 insteon #mac=60:64:05:3e:6b:ae
 192.168.1.151 homeauto #mac=00:21:b9:02:1a:5d 
 
 192.168.1.177 nas1 duplicity #mac=00:0D:A2:01:83:CD
